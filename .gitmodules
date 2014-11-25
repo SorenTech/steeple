@@ -1,3 +1,6 @@
 [submodule "marrow"]
 	path = marrow
 	url = https://github.com/SorenMediaGroup/bones.git
+[submodule "churchthemeframework"]
+	path = churchthemeframework
+	url = https://github.com/SorenMediaGroup/church-theme-framework.git
