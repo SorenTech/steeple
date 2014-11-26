@@ -31,12 +31,12 @@ limitations under the License.
 
 Steeple is currently in alpha stage development.
 
-The Bones starter theme and the Church Theme Framework repositories have been copied in as submodules in the directories "marrow" and "churchthemesframework," respectively. Files to be included in final Steeple project should be moved into the main project directory after they have been edited and approved.
+The Bones starter theme has been updated: "bones" replaced with "steeple" in most theme files. (Exceptions: url's for Bones theme have been left intact; translation files have not been updated.)
 
-Submodules contain redundant files, these should be combined/edited and reduced to a single file in the main directory.
+Starter theme files need to be screened and modified to meet design goals for a starter church theme.
 
-Bones starter theme currently supports .scss. For intitial and/or beta development, Steeple will not support any CSS compiler, though we hope to add that in an early release.
+The Church Theme Framework repository has been copied in as a submodule in the directory "churchthemesframework." Submodule probably contains files that may replace or need to be combined with starter theme files in the main directory. Once this has been completed, submodule will be deleted.
 
-Bones submodules is built with a responsive CSS grid. Should be evaluated and decide if should be kept or if should be replaced with a bootstrap grid.
+Bones starter theme supports translation into numerous languages. That isn't a top priority, but we'll add it into later updates.
 
-Church Theme Framework contains many components that we will want want to include. These can be used to replace elements of Bones theme as desired.
+Bones submodule is built with a responsive CSS grid. Should be evaluated and decide if should be kept or if should be replaced with a bootstrap grid.
