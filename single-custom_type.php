@@ -17,27 +17,27 @@
 
 <?php get_header(); ?>
 
-			<div id="content">
+<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+	<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+				<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
-								<header class="article-header">
+					<header class="article-header">
 
-									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'steepletheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
+						<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
+						<p class="byline vcard"><?php
+							printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'steepletheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
 									?></p>
 
-								</header>
+					</header>
 
-								<section class="entry-content cf">
-									<?php
+					<section class="entry-content cf">
+						<?php
 										// the content (pretty self explanatory huh)
 										the_content();
 
@@ -60,41 +60,41 @@
 											'link_after'  => '</span>',
 										) );
 									?>
-								</section> <!-- end article section -->
+					</section> <!-- end article section -->
 
-								<footer class="article-footer">
-									<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'steepletheme' ) . '</span> ', ', ' ) ?></p>
+					<footer class="article-footer">
+						<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'steepletheme' ) . '</span> ', ', ' ) ?></p>
 
-								</footer>
+					</footer>
 
-								<?php comments_template(); ?>
+						<?php comments_template(); ?>
 
-							</article>
+				</article>
 
-							<?php endwhile; ?>
+			<?php endwhile; ?>
 
-							<?php else : ?>
+			<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'steepletheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'steepletheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'steepletheme' ); ?></p>
-										</footer>
-									</article>
+					<article id="post-not-found" class="hentry cf">
+						<header class="article-header">
+							<h1><?php _e( 'Oops, Post Not Found!', 'steepletheme' ); ?></h1>
+						</header>
+						<section class="entry-content">
+							<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'steepletheme' ); ?></p>
+						</section>
+						<footer class="article-footer">
+							<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'steepletheme' ); ?></p>
+						</footer>
+					</article>
 
-							<?php endif; ?>
+			<?php endif; ?>
 
-						</main>
+		</main>
 
-						<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
-				</div>
+	</div>
 
-			</div>
+</div>
 
 <?php get_footer(); ?>

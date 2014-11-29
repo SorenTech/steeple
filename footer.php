@@ -1,9 +1,9 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="wrap cf">
+	<div id="inner-footer" class="wrap cf">
 
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
+		<nav role="navigation">
+			<?php wp_nav_menu(array(
     					'container' => '',                              // remove nav container
     					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
     					'menu' => __( 'Footer Links', 'steepletheme' ),   // nav name
@@ -16,19 +16,19 @@
         			'depth' => 0,                                   // limit the depth of the nav
     					'fallback_cb' => 'steeple_footer_links_fallback'  // fallback function
 						)); ?>
-					</nav>
+		</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+		<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
-				</div>
+	</div>
 
-			</footer>
+</footer>
 
-		</div>
+</div>
 
-		<?php // all js scripts are loaded in library/steeple.php ?>
-		<?php wp_footer(); ?>
+<?php // all js scripts are loaded in library/steeple.php ?>
+<?php wp_footer(); ?>
 
-	</body>
+</body>
 
 </html> <!-- end of site. what a ride! -->

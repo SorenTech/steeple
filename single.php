@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+	<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+		<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<?php
+				<?php
 								/*
 								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
 								 *
@@ -25,30 +25,30 @@
 								get_template_part( 'post-formats/format', get_post_format() );
 							?>
 
-						<?php endwhile; ?>
+			     <?php endwhile; ?>
 
-						<?php else : ?>
+			<?php else : ?>
 
-							<article id="post-not-found" class="hentry cf">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'steepletheme' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'steepletheme' ); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'steepletheme' ); ?></p>
-									</footer>
-							</article>
+				<article id="post-not-found" class="hentry cf">
+					<header class="article-header">
+						<h1><?php _e( 'Oops, Post Not Found!', 'steepletheme' ); ?></h1>
+					</header>
+					<section class="entry-content">
+						<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'steepletheme' ); ?></p>
+					</section>
+					<footer class="article-footer">
+						<p><?php _e( 'This is the error message in the single.php template.', 'steepletheme' ); ?></p>
+					</footer>
+				</article>
 
-						<?php endif; ?>
+			<?php endif; ?>
 
-					</main>
+		</main>
 
-					<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
-				</div>
+	</div>
 
-			</div>
+</div>
 
 <?php get_footer(); ?>
