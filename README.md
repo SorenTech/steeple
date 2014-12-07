@@ -30,14 +30,13 @@ limitations under the License.
 <h2>Feature List</h2>
 
 <ul>
-    <li>Responsive Grid (ready-to-go)</li>
+    <li>Mobile First, Responsive Grid (ready-to-go)</li>
     <li>SASS Stylesheets (ready-to-go)</li>
     <li>Custom Front-Page Reflecting Church Web Design "Standards" (in development)</li>
-    <li>"Sermons" custom content-type (in development)</li>
-    <li>"Window Panes" custom content-type for front-page slider (in development)</li>
-    <li>"Featured" custom content-type for front-page front-page featured content widget (in development)</li>
     <li>Built for integration with the "time.ly" plugin to provide events calendars that integrate with in-house systems such as google calendar, facebook calendar, and ical (in development)</li>
     <li>Built for integration with the "staffer" plugin to provide staff listings for churches (in development)</li>
+    <li>Built for integration with the "MetaSlider" plugin to provide custom sliders, with a pre-fab place for a slider on the front page (in development)</li>
+    <li>Built for integration with one of several custom content type plugins to allow for adding "sermon" or related content types (in development)</li>
 </ul>
 
 <h2>Current Status</h2>
@@ -47,8 +46,6 @@ Steeple is currently in alpha stage development. Feel free to jump in and contri
 The Bones starter theme has been updated: "bones" replaced with "steeple" in most theme files. (Exceptions: url's for Bones theme have been left intact; translation files have not been updated.)
 
 Starter theme files need to be screened and modified to meet design goals for a starter church theme.
-
-The Church Theme Framework repository has been copied in as a submodule in the directory "churchthemesframework." Submodule probably contains files that may replace or need to be combined with starter theme files in the main directory. Once this has been completed, submodule will be deleted.
 
 Bones starter theme supports translation into numerous languages. That isn't a top priority, but we'll add it into later updates.
 
