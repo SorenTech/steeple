@@ -12,8 +12,7 @@
                      ?>
         </div>
         
-       <div id="front-page-featured-content" class="featured-content"> 
-           //highlights featured content (sticky posts) for front page
+       <div id="front-page-featured-content" class="featured-content"> //highlights featured content (sticky posts) for front page
             <?php if(!exists(post_type("featured")) {
                          if (have_posts()) : while (have_posts()) : the_post();
                          
@@ -22,8 +21,7 @@
            ?>
         </div>
         
-        <div id="front-page-content">
-            //includes regular page content for front-page and front-page sidebar
+        <div id="front-page-content"> //includes regular page content for front-page and front-page sidebar
             
             <?php if(!exists(page_id="home") {
                               if (have_posts()) : while (have_posts()) : the_post();
@@ -39,8 +37,7 @@
             
         </div>
         
-       <div id="front-page-widget-area">
-           //includes a second specialty widget area for the front-page
+       <div id="front-page-widget-area"> //includes a second specialty widget area for the front-page
         
         </div>
     
