@@ -23,7 +23,7 @@
         
         <div id="front-page-content"> //includes regular page content for front-page and front-page sidebar
             
-            <?php if(!exists(page_id="home") {
+            <?php if(!exists(page_slug="home") {
                               if (have_posts()) : while (have_posts()) : the_post();
                              
                              the_content();
