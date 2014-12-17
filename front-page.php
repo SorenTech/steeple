@@ -7,7 +7,7 @@
 /* 
         // Uncomment this section to active slider.
         // <div id="front-page-slider" class="wrap cf"> 
-        //  <?php echo do_shortcode("metaslider id=123")); //replace 123 with id for front-page slider
+        //  <?php echo do_shortcode("metaslider id=123"); //replace 123 with id for front-page slider
                      ?>
        // </div>
 */
