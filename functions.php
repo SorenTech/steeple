@@ -165,8 +165,8 @@ function steeple_register_sidebars() {
 	));
 
     register_sidebar(array(
-		'id' => 'front-contentmain',
-		'name' => __( 'front-contentmain', 'steepletheme' ),
+		'id' => 'frontcontentmain',
+		'name' => __( 'frontcontentmain', 'steepletheme' ),
 		'description' => __( 'This is the sidebar for the content area on the front page', 'steepletheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -175,8 +175,8 @@ function steeple_register_sidebars() {
 	));
 
     register_sidebar(array(
-		'id' => 'front-secondary',
-		'name' => __( 'front-secondary', 'steepletheme' ),
+		'id' => 'frontsecondary',
+		'name' => __( 'frontsecondary', 'steepletheme' ),
 		'description' => __( 'This is the widget area below the front-page content', 'steepletheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
