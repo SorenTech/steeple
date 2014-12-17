@@ -164,6 +164,26 @@ function steeple_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+    register_sidebar(array(
+		'id' => 'front-contentmain',
+		'name' => __( 'front-contentmain', 'steepletheme' ),
+		'description' => __( 'This is the sidebar for the content area on the front page', 'steepletheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+    register_sidebar(array(
+		'id' => 'front-secondary',
+		'name' => __( 'front-secondary', 'steepletheme' ),
+		'description' => __( 'This is the widget area below the front-page content', 'steepletheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call
