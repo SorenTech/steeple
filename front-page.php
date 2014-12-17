@@ -4,11 +4,13 @@
 
     <div id="inner-content" class="wrap cf">
     
-        <div id="front-page-slider" class="wrap cf"> 
-            //imports a slider from Metaslider plugin
-            <?php echo do_shortcode("metaslider id=123")); //replace 123 with id for front-page slider
+/* 
+        // Uncomment this section to active slider.
+        // <div id="front-page-slider" class="wrap cf"> 
+        //  <?php echo do_shortcode("metaslider id=123")); //replace 123 with id for front-page slider
                      ?>
-        </div>
+       // </div>
+*/
         
        <div id="front-page-featured-content" class="featured-content"> //highlights featured content (sticky posts) for front page
             <?php // WP_Query - featured content
