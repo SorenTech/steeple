@@ -13,12 +13,22 @@
         </div>
         
        <div id="front-page-featured-content" class="featured-content"> //highlights featured content (sticky posts) for front page
-            <?php if(!exists(post_type("featured")) {
-                         if (have_posts()) : while (have_posts()) : the_post();
-                         
-                         <?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
-           }
-           ?>
+            <?php // WP_Query - featured content
+                     $args = array(
+                         'posts_per_page' => '3',
+                         'nopaging'       => true,
+                         'tag'            => 'featured',
+                     );
+                     $custom_query = new WP_Query($args);
+                     if ($custom_query->have_posts()) :
+                     while($custom_query->have_posts()) :
+                        $custom_query->the_post();
+                            the_title();
+                            the_thumbnail();
+                    endwhile; else :
+                     // not found
+                     endif;
+                     wp_reset_postdata(); ?>
         </div>
         
         <div id="front-page-content"> //includes regular page content for front-page and front-page sidebar
