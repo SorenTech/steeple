@@ -18,11 +18,25 @@
                          if (have_posts()) : while (have_posts()) : the_post();
                          
                          <?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
+           }
+           ?>
         </div>
         
         <div id="front-page-content">
             //includes regular page content for front-page and front-page sidebar
-        
+            
+            <?php if(!exists(page_id="home") {
+                              if (have_posts()) : while (have_posts()) : the_post();
+                             
+                             the_content();
+                         }
+                     ?>
+                             
+             <?php if(!exists(sidebar_front-page) {
+                 get_sidebar();
+             }
+                      ?>
+            
         </div>
         
        <div id="front-page-widget-area">
