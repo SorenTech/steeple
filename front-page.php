@@ -6,9 +6,7 @@
     
         <div id="front-page-slider" class="wrap cf"> 
             //imports a slider from Metaslider plugin
-            <?php if(!exists(do_shortcode("[metaslider id=123]")) {
-                echo do_shortcode("metaslider id=123")); //replace 123 with id for front-page slider
-}
+            <?php echo do_shortcode("metaslider id=123")); //replace 123 with id for front-page slider
                      ?>
         </div>
         
