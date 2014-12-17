@@ -32,8 +32,8 @@
         </div>
         
         <div id="front-page-content"> //includes regular page content for front-page and front-page sidebar
-            
-           <?php // WP_Query - front-page content
+          <div id="front-page-article">  
+                <?php // WP_Query - front-page content
                      $args = array(
                          'posts_per_page' => '1',
                          'nopaging'       => true,
@@ -49,10 +49,14 @@
                      // not found
                      endif;
                      wp_reset_postdata(); ?>
+            </div>
+            <div id="front-page-content-sidebar">
+                <?php get_sidebar('front-contentmain'); ?>
+            </div>
         </div>
         
        <div id="front-page-widget-area"> //includes a second specialty widget area for the front-page
-        
+            <?php get_sidebar('front-secondary'); ?>
         </div>
     
     </div>
