@@ -34,7 +34,7 @@
                          'nopaging'       => true,
                          'page_id'        => '1',
                      );
-                     $custom_query = new WP_Query($args);
+                     $frontcontent_query = new WP_Query($args);
                      if ($frontcontent_query->have_posts()) :
                      while($frontcontent_query->have_posts()) :
                         $frontcontent_query->the_post();
