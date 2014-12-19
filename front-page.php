@@ -16,10 +16,10 @@
                          'nopaging'       => true,
                          'tag'            => 'featured',
                      );
-                     $custom_query = new WP_Query($args);
-                     if ($custom_query->have_posts()) :
-                     while($custom_query->have_posts()) :
-                        $custom_query->get_the_post_thumbnail();
+                     $frontfeature_query = new WP_Query($args);
+                     if ($frontfeature_query->have_posts()) :
+                     while($frontfeature_query->have_posts()) :
+                        $frontfeature_query->get_the_post_thumbnail();
                     endwhile; else :
                      // not found
                      endif;
@@ -35,9 +35,9 @@
                          'id'            => '1',
                      );
                      $custom_query = new WP_Query($args);
-                     if ($custom_query->have_posts()) :
-                     while($custom_query->have_posts()) :
-                        $custom_query->the_post();
+                     if ($frontcontent_query->have_posts()) :
+                     while($frontcontent_query->have_posts()) :
+                        $frontcontent_query->the_post();
                             the_title();
                             the_content();
                     endwhile; else :
