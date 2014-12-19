@@ -98,7 +98,7 @@
                      $args = array(
                          'posts_per_page' => '1',
                          'nopaging'       => true,
-                         'slug'            => 'home',
+                         'id'            => '1',
                      );
                      $custom_query = new WP_Query($args);
                      if ($custom_query->have_posts()) :
