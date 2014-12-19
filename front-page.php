@@ -19,9 +19,7 @@
                      $custom_query = new WP_Query($args);
                      if ($custom_query->have_posts()) :
                      while($custom_query->have_posts()) :
-                        $custom_query->the_post();
-                            the_post_thumbnail( 'thumbnail' );
-			                 the_title();
+                        $custom_query->get_the_post_thumbnail();
                     endwhile; else :
                      // not found
                      endif;
