@@ -32,7 +32,7 @@
                      $args = array(
                          'posts_per_page' => '1',
                          'nopaging'       => true,
-                         'id'            => '1',
+                         'page_id'        => '1',
                      );
                      $custom_query = new WP_Query($args);
                      if ($frontcontent_query->have_posts()) :
