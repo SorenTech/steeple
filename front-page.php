@@ -20,8 +20,8 @@
                      if ($custom_query->have_posts()) :
                      while($custom_query->have_posts()) :
                         $custom_query->the_post();
-                            the_title();
-                            the_thumbnail();
+                            the_post_thumbnail( 'thumbnail' );
+			    the_title();
                     endwhile; else :
                      // not found
                      endif;
@@ -34,7 +34,7 @@
                      $args = array(
                          'posts_per_page' => '1',
                          'nopaging'       => true,
-                         'slug'            => 'home',
+                         'id'            => '2',
                      );
                      $custom_query = new WP_Query($args);
                      if ($custom_query->have_posts()) :
