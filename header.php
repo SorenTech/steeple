@@ -73,4 +73,13 @@
 
 				</div>
 
+                 <div id="front-page-slider" class="slider m-all t-all d-all"> 
+                     <?php 
+                        if (is_front_page() {
+                            echo do_shortcode("metaslider id=123"); //replace 123 with id for front-page slider
+                        }              
+                     ?>
+                </div>
+    </div>
+                
 			</header>
