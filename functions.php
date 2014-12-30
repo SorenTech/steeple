@@ -165,19 +165,9 @@ function steeple_register_sidebars() {
 	));
 
     register_sidebar(array(
-		'id' => 'frontcontentmain',
-		'name' => __( 'frontcontentmain', 'steepletheme' ),
+		'id' => 'Featured',
+		'name' => __( 'Featured', 'steepletheme' ),
 		'description' => __( 'This is the sidebar for the content area on the front page', 'steepletheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-    register_sidebar(array(
-		'id' => 'frontsecondary',
-		'name' => __( 'frontsecondary', 'steepletheme' ),
-		'description' => __( 'This is the widget area below the front-page content', 'steepletheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
