@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Fourteen Featured Content
+ * Steeple Featured Content
  *
  * This module allows you to define a subset of posts to be displayed
  * in the theme's Featured Content area.
@@ -21,7 +21,7 @@ class Featured_Content {
 	 *
 	 * @see Featured_Content::init()
 	 *
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @static
 	 * @access public
@@ -36,7 +36,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function setup() {
 		add_action( 'init', array( __CLASS__, 'init' ), 30 );
@@ -53,7 +53,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function init() {
 		$theme_support = get_theme_support( 'featured-content' );
@@ -102,7 +102,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function wp_loaded() {
 		if ( self::get_setting( 'hide-tag' ) ) {
@@ -116,7 +116,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @return array Array of featured posts.
 	 */
@@ -146,7 +146,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @return array Array of post IDs.
 	 */
@@ -198,7 +198,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @return array Array of sticky posts.
 	 */
@@ -216,7 +216,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function delete_transient() {
 		delete_transient( 'featured_content_ids' );
@@ -231,7 +231,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param WP_Query $query WP_Query object.
 	 * @return WP_Query Possibly-modified WP_Query.
@@ -281,7 +281,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param int $tag_id The term_id of the tag that has been deleted.
 	 */
@@ -304,7 +304,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param array $terms      List of term objects. This is the return value of get_terms().
 	 * @param array $taxonomies An array of taxonomy slugs.
@@ -347,7 +347,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param array $terms    A list of term objects. This is the return value of get_the_terms().
 	 * @param int   $id       The ID field for the post object that terms are associated with.
@@ -388,7 +388,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function register_setting() {
 		register_setting( 'featured-content', 'featured-content', array( __CLASS__, 'validate_settings' ) );
@@ -399,15 +399,15 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 */
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'featured_content', array(
-			'title'          => __( 'Featured Content', 'twentyfourteen' ),
-			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'twentyfourteen' ),
-				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ), admin_url( 'edit.php' ) ) ),
+			'title'          => __( 'Featured Content', 'steeple' ),
+			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'steeple' ),
+				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'steeple' ), admin_url( 'edit.php' ) ) ),
 				admin_url( 'edit.php?show_sticky=1' )
 			),
 			'priority'       => 130,
@@ -416,7 +416,7 @@ class Featured_Content {
 
 		// Add Featured Content settings.
 		$wp_customize->add_setting( 'featured-content[tag-name]', array(
-			'default'              => _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ),
+			'default'              => _x( 'featured', 'featured content default tag slug', 'steeple' ),
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
@@ -428,12 +428,12 @@ class Featured_Content {
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'    => __( 'Tag Name', 'twentyfourteen' ),
+			'label'    => __( 'Tag Name', 'steeple' ),
 			'section'  => 'featured_content',
 			'priority' => 20,
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'    => __( 'Don&rsquo;t display tag on front end.', 'twentyfourteen' ),
+			'label'    => __( 'Don&rsquo;t display tag on front end.', 'steeple' ),
 			'section'  => 'featured_content',
 			'type'     => 'checkbox',
 			'priority' => 30,
@@ -445,7 +445,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 */
 	public static function enqueue_scripts() {
 		wp_enqueue_script( 'featured-content-suggest', get_template_directory_uri() . '/js/featured-content-admin.js', array( 'jquery', 'suggest' ), '20131022', true );
@@ -465,7 +465,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param string $key The key of a recognized setting.
 	 * @return mixed Array of all settings by default. A single value if passed as first parameter.
@@ -476,7 +476,7 @@ class Featured_Content {
 		$defaults = array(
 			'hide-tag' => 1,
 			'tag-id'   => 0,
-			'tag-name' => _x( 'featured', 'featured content default tag slug', 'twentyfourteen' ),
+			'tag-name' => _x( 'featured', 'featured content default tag slug', 'steeple' ),
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
@@ -498,7 +498,7 @@ class Featured_Content {
 	 *
 	 * @static
 	 * @access public
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param array $input Array of settings input.
 	 * @return array Validated settings output.

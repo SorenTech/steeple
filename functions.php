@@ -258,30 +258,30 @@ add_action('wp_enqueue_scripts', 'steeple_fonts');
  *
  * Getter function for Featured Content Plugin.
  *
- * @since Twenty Fourteen 1.0
+ * @since Steeple 0.2.0
  *
  * @return array An array of WP_Post objects.
  */
-function twentyfourteen_get_featured_posts() {
+function steeple_get_featured_posts() {
 	/**
-	 * Filter the featured posts to return in Twenty Fourteen.
+	 * Filter the featured posts to return in Steeple.
 	 *
-	 * @since Twenty Fourteen 1.0
+	 * @since Steeple 0.2.0
 	 *
 	 * @param array|bool $posts Array of featured posts, otherwise false.
 	 */
-	return apply_filters( 'twentyfourteen_get_featured_posts', array() );
+	return apply_filters( 'steeple_get_featured_posts', array() );
 }
 
 /**
  * A helper conditional function that returns a boolean value.
  *
- * @since Twenty Fourteen 1.0
+ * @since Steeple 0.2.0
  *
  * @return bool Whether there are featured posts.
  */
-function twentyfourteen_has_featured_posts() {
-	return ! is_paged() && (bool) twentyfourteen_get_featured_posts();
+function steeple_has_featured_posts() {
+	return ! is_paged() && (bool) steeple_get_featured_posts();
 }
 
 /*

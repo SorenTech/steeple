@@ -218,7 +218,7 @@ function steeple_theme_support() {
     
     // Add support for featured content.
 	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
+		'featured_content_filter' => 'steeple_get_featured_posts',
 		'max_posts' => 6,
 	) );
 
