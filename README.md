@@ -3,13 +3,13 @@ steeple
 
 <h1>Project Vision and Intro</h1>
 
-A mobile-first, responsive WordPress starter theme for churches.
+A mobile-first, responsive WordPress starter theme for custom church websites.
 
-Steeple was built from the Bones WordPress starter theme by Eddie Machado. Bones was built to make the life of the developer easier using HTML5 and a strong semantic foundation. It includes a responsive CSS grid and SASS stylesheets.
+Steeple was built from the Bones WordPress starter theme by Eddie Machado. Bones was built to make the life of the developer easier using the HTML 5 Boilerplate. 
 
-Steeple turns Bones into the perfect Starter theme for a church website. It adds a custom front-page with a full-width slider, custom content types, and ready integration with events calendars and social network profiles to give a major head-start to church theme designers.
+Steeple adds functionality to Bones that enables more rapid development for church websites. 
 
-Steeple is built for developers. It provides a fully-funcitonal starting point, but it's meant to be modified and customized. Use it to build the perfect theme for your church website.
+Like Bones, Steeple is built for developers. It provides a fully-funcitonal starting point, but it's meant to be modified and customized. Use it to build the perfect theme for your church website.
 
 <h2>License Info</h2>
 
@@ -30,23 +30,40 @@ limitations under the License.
 <h2>Feature List</h2>
 
 <ul>
-    <li>Mobile First, Responsive Grid (ready-to-go)</li>
-    <li>SASS Stylesheets (ready-to-go)</li>
-    <li>Custom Front-Page Reflecting Church Web Design "Standards" (in development)</li>
-    <li>Built for integration with the "time.ly" plugin to provide events calendars that integrate with in-house systems such as google calendar, facebook calendar, and ical (in development)</li>
-    <li>Built for integration with the "staffer" plugin to provide staff listings for churches (in development)</li>
-    <li>Built for integration with the "MetaSlider" plugin to provide custom sliders, with a pre-fab place for a slider on the front page (in development)</li>
-    <li>Built for integration with one of several custom content type plugins to allow for adding "sermon" or related content types (in development)</li>
+    <li>Mobile First, Responsive Grid</li>
+    <li>SASS Stylesheets</li>
+    <li>Placeholder text for an image slider on the front-page (integrated into Header)</li>
+    <li>Featured Content Area On Front-Page (integrated into Page template)</li>
+    <li>Designated sidebar for font-page (integarted into Page template)</li>
+    <li>Built-in capacity for custom content types and taxonomies</li>
 </ul>
 
 <h2>Current Status</h2>
 
-Steeple is currently in alpha stage development. Feel free to jump in and contribute to making it a working reality!
+Steeple is currently in beta stage development. Feel free to jump in and contribute!
 
-The Bones starter theme has been updated: "bones" replaced with "steeple" in most theme files. (Exceptions: url's for Bones theme have been left intact; translation files have not been updated.)
+Translation files are currently still "as is" from the Bones starter theme. Translation support is intended to be included in the 1.0 release.
 
-Starter theme files need to be screened and modified to meet design goals for a starter church theme.
+The Bones starter grid needs to be evaluated and updated to support a wider range of media querries.
 
-Bones starter theme supports translation into numerous languages. That isn't a top priority, but we'll add it into later updates.
+<h2>Use and Implementation</h2>
 
-Bones submodule is built with a responsive CSS grid. Should be evaluated and decide if should be kept or if should be replaced with a bootstrap grid.
+<h3>To use the Meta-Slider plugin on the front-page:</h3>
+
+First, install and activate the meta-slider plugin.
+
+Second, create a slider.
+
+Third, edit the "header.php" template file: replace "metaslider id=123" on line 79 with the proper ID of your slider.
+
+<h3>To Use Featured Content on Front Page</h3>
+
+This functionality is taken straight from the Twenty Fourteen Wordpress Default Theme:
+
+Designate a tag to be used as the "featured" tag in the Admin panel.
+
+Tag posts with the Featured tag.
+
+Change settings to point to a static page as front-page.
+
+Featured posts will now appear in featured content area of the front-page.
