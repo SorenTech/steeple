@@ -6,6 +6,12 @@
 
 		<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
+          <?php  if ( is_front_page() && steeple_has_featured_posts() ) {
+		  // Include the featured content template.
+		      get_template_part( 'featured-content' );
+	   }
+            ?>
+            
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -71,6 +77,13 @@
 			<?php endif; ?>
 
 		</main>
+        
+        <div id="sidebar" class="front-page m-1of3 t-1of3 d-1of4">
+            <?php if ( is_front_page() && is_active_sidebar( 'Featured' ) ) {
+                get_sidebar('Featured');
+            }
+            ?>
+    
 
 	   <?php get_sidebar(); ?>
 
