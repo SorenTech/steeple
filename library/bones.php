@@ -215,6 +215,13 @@ function steeple_theme_support() {
 			'footer-links' => __( 'Footer Links', 'steepletheme' ) // secondary nav in footer
 		)
 	);
+    
+    // Add support for featured content.
+	add_theme_support( 'featured-content', array(
+		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
+		'max_posts' => 6,
+	) );
+
 } /* end steeple theme support */
 
 
