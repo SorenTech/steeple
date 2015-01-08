@@ -291,7 +291,7 @@ function steeple_has_featured_posts() {
  * before the 'setup_theme' hook.
  */
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
-	require get_template_directory() . '/inc/featured-content.php';
+	require get_template_directory() . '/library/featured-content.php';
 }
 
 
